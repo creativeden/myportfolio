@@ -12,6 +12,11 @@
     border-radius: 10px;
 }
 
+.menuButton {
+    background-color: transparent;
+    border: 0;
+}
+
 .menuButton, 
 .mobileLinks {
     display: none;
