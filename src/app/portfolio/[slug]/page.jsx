@@ -13,6 +13,17 @@ const getData = async (slug) => {
     return res.json()
 }
 
+export const generateMetadata = async ({params}) => {
+    const {slug} = params
+
+    const post = await getData(slug)
+
+    return {
+        title: post.title,
+        description: post.body,
+    }
+}
+
 const SinglePortfolioPage = async ({params}) => {
 
     const {slug} = params
