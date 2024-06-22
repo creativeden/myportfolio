@@ -1,20 +1,25 @@
 import PostCard from '@/components/postCard/postCard'
 import styles from './portfolio.module.css'
+import { getPosts } from '@/lib/data'
 
-const getData = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts/', {next:{revalidate:3600}})
-    // https://db37a77371102129.mokky.dev/portfolio
+//FETCH DATA WITH AN API
+// const getData = async () => {
+//     const res = await fetch('https://jsonplaceholder.typicode.com/posts/', {next:{revalidate:3600}})
+//     // https://db37a77371102129.mokky.dev/portfolio
 
-    if(!res.ok) {
-        throw new Error('Something went wrong')
-    }
+//     if(!res.ok) {
+//         throw new Error('Something went wrong')
+//     }
 
-    return res.json()
-}
+//     return res.json()
+// }
 
 const PortfolioPage = async () => {
+    //FETCH DATA WITH AN API
+    // const posts = await getData()
 
-    const posts = await getData()
+    //FETCH DATA WITHOUT AN API
+    const posts = await getPosts()
 
     return (
         <div className={styles.container}>
