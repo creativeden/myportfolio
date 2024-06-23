@@ -15,20 +15,20 @@ import { getPost } from '@/lib/data'
 //     return res.json()
 // }
 
-// export const generateMetadata = async ({params}) => {
-//     const {slug} = params
+export const generateMetadata = async ({params}) => {
+    const {slug} = params
     
-//      //FETCH DATA WITH AN API
-//     // const post = await getData(slug)
+     //FETCH DATA WITH AN API
+    // const post = await getData(slug)
 
-//     //FETCH DATA WITHOUT AN API
-//     const post = await getPost(slug)
+    //FETCH DATA WITHOUT AN API
+    const post = await getPost(slug)
 
-//     return {
-//         title: post.title,
-//         description: post.body,
-//     }
-// }
+    return {
+        title: post.title,
+        description: post.description,
+    }
+}
 
 const SinglePortfolioPage = async ({params}) => {
 
@@ -57,7 +57,7 @@ const SinglePortfolioPage = async ({params}) => {
                     </div>
                 </div>
                 <div className={styles.content}>
-                    {post?.body}
+                    {post?.description}
                 </div>
             </div>
         </div>
