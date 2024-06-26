@@ -8,16 +8,17 @@ import bcrypt from "bcryptjs";
 
 export const addPost = async (prevState,formData) => {
   // const title = formData.get("title");
-  // const desc = formData.get("desc");
+  // const description = formData.get("description");
   // const slug = formData.get("slug");
 
-  const { title, desc, slug, userId } = Object.fromEntries(formData);
+  const { title, description, img, slug, userId } = Object.fromEntries(formData);
 
   try {
     connectToDb();
     const newPost = new Post({
       title,
-      desc,
+      description,
+      img,
       slug,
       userId,
     });
@@ -53,10 +54,20 @@ export const addUser = async (prevState,formData) => {
 
   try {
     connectToDb();
+
+    const user = await User.findOne({ username });
+
+    if (user) {
+      return { error: "Username already exists" };
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
     const newUser = new User({
       username,
       email,
-      password,
+      password: hashedPassword,
       img,
     });
 

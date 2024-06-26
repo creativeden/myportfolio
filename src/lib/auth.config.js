@@ -22,8 +22,9 @@ export const authConfig = {
     authorized({ auth, request }) {
       const user = auth?.user;
       const isOnAdminPanel = request.nextUrl?.pathname.startsWith("/admin");
-      const isOnBlogPage = request.nextUrl?.pathname.startsWith("/blog");
+      const isOnPortfolioPage = request.nextUrl?.pathname.startsWith("/portfolio");
       const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
+      const isOnRegisterPage = request.nextUrl?.pathname.startsWith("/register");
 
       // ONLY ADMIN CAN REACH THE ADMIN DASHBOARD
 
@@ -33,13 +34,17 @@ export const authConfig = {
 
       // ONLY AUTHENTICATED USERS CAN REACH THE BLOG PAGE
 
-      if (isOnBlogPage && !user) {
+      if (isOnPortfolioPage && !user) {
         return false;
       }
 
       // ONLY UNAUTHENTICATED USERS CAN REACH THE LOGIN PAGE
 
       if (isOnLoginPage && user) {
+        return Response.redirect(new URL("/", request.nextUrl));
+      }
+
+      if (isOnRegisterPage && user) {
         return Response.redirect(new URL("/", request.nextUrl));
       }
 
