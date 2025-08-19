@@ -14,6 +14,36 @@
     object-fit: contain;
 }
 
+.subtitle {
+    font-size: 54px;
+    margin-bottom: 3rem;
+    color: var(--btn);
+}
+
+.title {
+    font-size: 54px;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 35px;
+}
+.description + .description {
+    margin-top: 1rem;
+}
+.description:last-child {
+    margin-bottom: 0;
+}
+
+.description a {
+    text-decoration: underline;
+}
+.description a:hover {
+    text-decoration: none;
+}
+
 .formContainer {
     flex: 1;
 }

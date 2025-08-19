@@ -1,9 +1,9 @@
 :root {
     --bg: #16171d;
     --bgSoft: #2d2b42;
-    --text: white;
+    --text: #f1f1f1;
     --textSoft: #e5e5e5;
-    --btn: #3673fd;
+    --btn: #10B981;
 }
 
 * {

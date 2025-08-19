@@ -11,6 +11,7 @@
 }
 
 .subtitle {
+    font-size: 54px;
     color: var(--btn);
 }
 
@@ -18,9 +19,16 @@
     font-size: 54px;
 }
 
+.list {
+    font-size: 20px;
+    line-height: 35px;
+    padding-left: 20px;
+}
+
 .description {
     font-size: 20px;
     font-weight: 300;
+    line-height: 35px;
 }
 
 .boxes {
