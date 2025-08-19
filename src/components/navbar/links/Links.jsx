@@ -29,7 +29,7 @@ const Links = ({session}) => {
     const [open, setOpen] = useState(false)
 
     //TEMPORARY
-    const isAdmin = true
+    // const isAdmin = true
 
     return (
         <div className={styles.container}>
@@ -44,7 +44,7 @@ const Links = ({session}) => {
             {
                 open && <div className={styles.mobileLinks}>
                     {links.map((link)=>(
-                        <NavLink item={link} key={link.title} />
+                        <NavLink item={link} key={link.title} onClick={() => setOpen(false)} />
                     ))}
                 </div>
             }

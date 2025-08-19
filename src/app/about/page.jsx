@@ -12,7 +12,7 @@ const AboutPage = () => {
             <div className={styles.textContainer}>
                 <h1 className={styles.subtitle}>About Us</h1>
                 <h2 className={styles.title}>We’re a creative studio that turns ideas into bold, beautiful websites.</h2>
-                <p className={styles.description}>We love fresh design, smooth interfaces, and everything digital. Our mission is simple: to create projects that inspire, engage, and help your business grow.</p>
+                <p className={styles.description}>We love fresh design, smooth interfaces, and everything digital. <br />Our mission is simple: to create projects that inspire, engage, and help your business grow.</p>
                 <div className={styles.boxes}>
                     <div className={styles.boxitem}>
                         <h5>15+</h5>
@@ -42,7 +42,7 @@ const AboutPage = () => {
                     <li>Branding, identity, and ongoing support</li>
                 </ul>
                 <h3 className={styles.title}>Our philosophy</h3>
-                <p className={styles.description}>We don’t just build websites — we craft digital stories that make brands shine. With us, your project won’t just exist online, it will stand out and be loved by your audience.</p>
+                <p className={styles.description}>We don’t just build websites — we craft digital stories that make brands shine. <br />With us, your project won’t just exist online, it will stand out and be loved by your audience.</p>
             </div>
             {/* <div className={styles.imageContainer}>
                 <Image src="/about.png" alt="" fill className={styles.aboutImg} />

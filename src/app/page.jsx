@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div className={styles.container}>
             <div className={styles.textContainer}>
-                <h1 className={styles.title}>Creative Thoughts Agency</h1>
+                <h1 className={styles.title}><span className={styles.highlight}>C</span>reative <br /><span className={styles.highlight}>T</span>houghts <br /><span className={styles.highlight}>A</span>gency</h1>
                 <p className={styles.description}>We turn bold ideas into digital experiences that inspire and engage.</p>
             </div>
             {/* <div className={styles.imageContainer}>
