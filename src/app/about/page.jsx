@@ -1,8 +1,8 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import styles from './about.module.css'
 
 export const metadata = {
-    title: 'byDep | About Us – Innovative Web Design & Development',
+    title: 'About Us – Innovative Web Design & Development',
     description: 'Discover our creative web studio. We craft bold websites, landing pages, and digital experiences that inspire, engage, and grow your business.',
 }
 

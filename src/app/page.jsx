@@ -1,8 +1,8 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import styles from './home.module.css'
 
 export const metadata = {
-    title: 'byDep | Creative Web Design & Development Agency',
+    title: 'Creative Web Design & Development Agency',
     description: 'We are a creative web agency crafting bold websites, digital experiences, and branding that help businesses stand out and grow.',
 }
 
